@@ -18,16 +18,21 @@ currentTime();
 setInterval(currentTime, 1000);
 
 document.addEventListener("DOMContentLoaded", function () {
-    const countUrl = "https://api.countapi.xyz/hit/russolazy-rus-portfolio/visits";
+    const countUrl = "https://api.countapi.xyz/hit/russolazy.github.io/rus/visits";
     const displayElement = document.getElementById("visitor-count");
 
     fetch(countUrl)
-        .then((response) => response.json())
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then((data) => {
             displayElement.textContent = data.value;
         })
         .catch((error) => {
             console.error("Error fetching visitor count:", error);
-            displayElement.textContent = "Error";
+            displayElement.textContent = "0";
         });
 });
