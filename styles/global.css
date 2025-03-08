@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Keania+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+:root {
+    --bg-color: #21201c;
+    --text-primary: #0041c7;
+    --text-secondary: #3acbe8;
+    --text-header: #1ca3de;
+    --text-muted: #c6c6c6;
+    --input-primary: #253045;
+    --btn-primary: #40a2e9;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+}
+
+.text-header {
+    font-family: "Keania One";
+}
+
+.break-line {
+    border-bottom: 1px solid gray;
+    margin-bottom: 50px;
+}
+
+.break-padding {
+    padding: 1em;
+}
+
+.max-header,
+.min-header {
+    font-family: "Keania One";
+    color: var(--text-header);
+}
+
+.max-header {
+    font-size: 36px;
+}
+
+.min-header {
+    font-size: 26px;
+    text-align: center;
+}
