@@ -8,7 +8,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins";
-    overflow-x: hidden;
 }
 
 :root {
@@ -24,6 +23,7 @@
 body {
     background-color: var(--bg-color);
     color: white;
+    overflow-x: hidden;
 }
 
 .text-header {
@@ -46,10 +46,14 @@ body {
 }
 
 .max-header {
-    font-size: 36px;
+    font-size: clamp(18px, 4vw, 36px);
 }
 
 .min-header {
     font-size: 26px;
     text-align: center;
+}
+
+.max-p {
+    font-size: clamp(8px, 3vw, 18px);
 }

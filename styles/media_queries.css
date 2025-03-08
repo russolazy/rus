@@ -1,0 +1,24 @@
+@media only screen and (max-width: 800px) {
+    .container {
+        padding: 10px;
+    }
+    .hero-section {
+        flex-direction: column-reverse;
+        gap: 20px;
+        transition: all 0.5s ease;
+        text-align: center;
+    }
+
+    .projects .project-cards {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        gap: 20px;
+        transition: all 0.5s ease;
+        text-align: center;
+    }
+}
