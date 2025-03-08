@@ -12,6 +12,10 @@
     .projects .project-cards {
         flex-direction: column;
     }
+
+    .hero-info .hero-logo {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 620px) {
