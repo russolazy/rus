@@ -17,15 +17,20 @@ function currentTime() {
 currentTime();
 setInterval(currentTime, 1000);
 
-const apiKey = "gNoWl0tivsgh8Oe+W+R4oA==eW2CheIJEXnAK6tU";
-fetch("https://api.api-ninjas.com/v1/counter?id=rus-portfolio&hit=true", {
-    method: "GET",
-    headers: { "X-Api-Key": apiKey },
-})
-    .then((response) => response.json())
-    .then((data) => {
-        document.getElementById("visitor-count").textContent = data.value;
+document.addEventListener("DOMContentLoaded", function () {
+    const apiKey = "gNoWl0tivsgh8Oe+W+R4oA==eW2CheIJEXnAK6tU";
+    const countUrl = "https://api.api-ninjas.com/v1/counter?id=rus-portfolio&hit=true";
+
+    fetch(countUrl, {
+        method: "GET",
+        headers: { "X-Api-Key": apiKey },
     })
-    .catch((error) => {
-        console.error("Error fetching visitor count:", error);
-    });
+        .then((response) => response.json())
+        .then((data) => {
+            document.getElementById("visitor-count").textContent = data.value;
+        })
+        .catch((error) => {
+            console.error("Error fetching visitor count:", error);
+            document.getElementById("visitor-count").textContent = "Error fetching count";
+        });
+});
