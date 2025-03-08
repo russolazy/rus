@@ -16,3 +16,18 @@ function currentTime() {
 
 currentTime();
 setInterval(currentTime, 1000);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const countUrl = "https://api.countapi.xyz/hit/johnrus-portfolio/visits"; // Change to your namespace
+    const displayElement = document.getElementById("visitor-count");
+
+    fetch(countUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            displayElement.textContent = data.value;
+        })
+        .catch((error) => {
+            console.error("Error fetching visitor count:", error);
+            displayElement.textContent = "Error";
+        });
+});
