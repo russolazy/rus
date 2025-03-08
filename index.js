@@ -18,7 +18,7 @@ currentTime();
 setInterval(currentTime, 1000);
 
 document.addEventListener("DOMContentLoaded", function () {
-    const countUrl = "https://api.countapi.xyz/hit/johnrus-portfolio/visits"; // Change to your namespace
+    const countUrl = "https://api.countapi.xyz/hit/russolazy-rus-portfolio/visits";
     const displayElement = document.getElementById("visitor-count");
 
     fetch(countUrl)
