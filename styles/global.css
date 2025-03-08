@@ -57,3 +57,7 @@ body {
 .max-p {
     font-size: clamp(8px, 3vw, 18px);
 }
+
+.mark-text {
+    color: var(--btn-primary);
+}

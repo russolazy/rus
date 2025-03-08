@@ -30,7 +30,7 @@
 }
 
 .hero-section .hero-info .hero-logo img {
-    height: 35px;
+    height: 25px;
     cursor: pointer;
 }
 
@@ -47,11 +47,9 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
 }
 
@@ -66,18 +64,6 @@
     position: absolute;
     animation: spin 1.5s linear infinite;
 }
-
-/* .hero-section .hero-image div {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    border: 6px solid transparent;
-    border-left-color: var(--text-secondary);
-    border-right-color: var(--text-secondary);
-    overflow: hidden;
-
-    animation: spin 2s linear infinite;
-} */
 
 .hero-section .hero-image div img {
     height: 100%;
@@ -144,6 +130,7 @@
 
 .projects .project-cards .project-info .project-tech ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     list-style: none;
     text-decoration: underline;
